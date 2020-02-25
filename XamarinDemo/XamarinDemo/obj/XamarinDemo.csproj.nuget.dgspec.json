@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RimazM\\source\\repos\\Xamarin\\XamarinDemo\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj": {}
+    "C:\\Users\\RimazM\\source\\repos\\Xamarin\\checkXD\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RimazM\\source\\repos\\Xamarin\\XamarinDemo\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj": {
+    "C:\\Users\\RimazM\\source\\repos\\Xamarin\\checkXD\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\XamarinDemo\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj",
+        "projectUniqueName": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\checkXD\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj",
         "projectName": "XamarinDemo",
-        "projectPath": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\XamarinDemo\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj",
+        "projectPath": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\checkXD\\XamarinDemo\\XamarinDemo\\XamarinDemo.csproj",
         "packagesPath": "C:\\Users\\RimazM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\XamarinDemo\\XamarinDemo\\XamarinDemo\\obj\\",
+        "outputPath": "C:\\Users\\RimazM\\source\\repos\\Xamarin\\checkXD\\XamarinDemo\\XamarinDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
