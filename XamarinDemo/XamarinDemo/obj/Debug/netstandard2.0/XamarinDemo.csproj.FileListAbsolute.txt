@@ -1,0 +1,12 @@
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.deps.json
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.dll
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.pdb
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.csprojAssemblyReference.cache
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.csproj.CoreCompileInputs.cache
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.AssemblyInfoInputs.cache
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.AssemblyInfo.cs
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.dll
+C:\Users\RimazM\source\repos\Xamarin\XamarinDemo\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.pdb
