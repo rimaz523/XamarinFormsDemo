@@ -7,10 +7,18 @@
              x:Class="XamarinDemo.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="400">
+            <Label Text="QUALITEST" TextColor="Purple" FontAttributes="Bold" FontSize="Title"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+            <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success" FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Login" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Contact Us" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
