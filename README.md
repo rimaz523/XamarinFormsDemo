@@ -1,1 +1,1 @@
-"# XamarinFormsDemo" 
+This is a sample demo app created to learn programming with Xamarin Forms
