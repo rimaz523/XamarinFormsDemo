@@ -8,7 +8,7 @@
 
     <StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="400">
-            <Label Text="QUALITEST" TextColor="Purple" FontAttributes="Bold" FontSize="Title"/>
+            <Label Text="QUALITEST" TextColor="Purple" FontAttributes="Bold" FontSize="50"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
             <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success" FontSize="Medium"/>
