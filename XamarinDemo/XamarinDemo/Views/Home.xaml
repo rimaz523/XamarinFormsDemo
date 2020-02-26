@@ -15,10 +15,12 @@
                 <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Login" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Login" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" 
+                        HorizontalOptions="FillAndExpand" Margin="40" Clicked="LoginOnClicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Contact Us" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Contact Us" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" 
+                        HorizontalOptions="FillAndExpand" Margin="40" Clicked="ContactUsOnClicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

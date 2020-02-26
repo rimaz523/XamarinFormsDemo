@@ -16,5 +16,15 @@ namespace XamarinDemo.Views
         {
             InitializeComponent();
         }
+
+        private async void LoginOnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Login());
+        }
+
+        private async void ContactUsOnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ContactUs());
+        }
     }
 }
