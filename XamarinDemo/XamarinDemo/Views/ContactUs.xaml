@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Colors="clr-namespace:XamarinDemo.Common"
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.ContactUs">
     <ContentPage.Content>
@@ -22,14 +23,14 @@
                 <Entry Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Submit" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" HorizontalOptions="FillAndExpand" Margin="40"/>
             </StackLayout>
-            <Grid BackgroundColor="DarkOrange">
+            <Grid BackgroundColor="{x:Static Colors:Colors.QTOrange}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Label Text="+91-92233445566" TextColor="White" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-                <Label Text="contact@qualitest.comaaaa" TextColor="White"  Grid.Column="1"  VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="+91-92233445566" TextColor="{x:Static Colors:Colors.QTWhite}" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="contact@qualitest.comaaaa" TextColor="{x:Static Colors:Colors.QTWhite}"  Grid.Column="1"  VerticalOptions="Center" HorizontalTextAlignment="Center"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
