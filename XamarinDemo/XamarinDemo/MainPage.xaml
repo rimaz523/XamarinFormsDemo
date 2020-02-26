@@ -6,8 +6,9 @@
              mc:Ignorable="d"
              x:Class="XamarinDemo.MainPage">
 
+    <!--<Main Screen Layout>-->
     <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="400">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="300">
             <Label Text="QUALITEST" TextColor="Purple" FontAttributes="Bold" FontSize="50"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">

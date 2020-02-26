@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinDemo.Views.ContactUs">
+    <ContentPage.Content>
+        <!--Login Screen Layout-->
+        <StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                <Label Text="Contact Us" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand" />
+                <Entry Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email"/>
+                <Label Text="Mobile" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" Keyboard="Telephone"/>
+                <Label Text="Subject" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry Placeholder="Enter subject" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Message" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="DarkOrange" HeightRequest="40">
+                <Label Text="+91-92233445566" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10"/>
+                <Label Text="contact@qualitest.com" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

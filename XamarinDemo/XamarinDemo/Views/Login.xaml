@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinDemo.Views.Login">
+    <ContentPage.Content>
+        <!--Login Screen Layout-->
+        <StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="Purple">
+                <Label Text="QUALITEST" TextColor="White" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="25"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Password" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Reset" TextColor="White" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Cancel" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
