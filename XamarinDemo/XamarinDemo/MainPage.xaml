@@ -3,23 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Colors="clr-namespace:XamarinDemo.Common"
              mc:Ignorable="d"
              x:Class="XamarinDemo.MainPage">
 
     <!--<Main Screen Layout>-->
     <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="300">
-            <Label Text="QUALITEST" TextColor="Purple" FontAttributes="Bold" FontSize="50"/>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="{x:Static Colors:Colors.QTPurple}">
+            <Label Text="QUALITEST" TextColor="White" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-            <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success" FontSize="Medium"/>
+        <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="25"/>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+            <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Password" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+            <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Login" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
+            <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
         </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Button Text="Contact Us" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Button Text="Reset" TextColor="White" BackgroundColor="Gray" Grid.Column="0"/>
+            <Button Text="Cancel" TextColor="White" BackgroundColor="Red" Grid.Column="1"/>
+        </Grid>
     </StackLayout>
-
 </ContentPage>
