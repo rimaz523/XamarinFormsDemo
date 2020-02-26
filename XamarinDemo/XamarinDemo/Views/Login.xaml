@@ -21,10 +21,13 @@
             <StackLayout Orientation="Horizontal">
                 <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Reset" TextColor="White" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Cancel" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Button Text="Reset" TextColor="White" BackgroundColor="Gray" Grid.Column="0"/>
+                <Button Text="Cancel" TextColor="White" BackgroundColor="Red" Grid.Column="1"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

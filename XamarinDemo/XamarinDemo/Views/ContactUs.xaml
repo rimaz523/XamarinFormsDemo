@@ -24,10 +24,13 @@
             <StackLayout Orientation="Horizontal">
                 <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" BackgroundColor="DarkOrange" HeightRequest="40">
-                <Label Text="+91-92233445566" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10"/>
-                <Label Text="contact@qualitest.com" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10"/>
-            </StackLayout>
+            <Grid BackgroundColor="DarkOrange">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Text="+91-92233445566" TextColor="White" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="contact@qualitest.comaaaa" TextColor="White"  Grid.Column="1"  VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
