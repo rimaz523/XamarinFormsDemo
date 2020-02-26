@@ -7,27 +7,10 @@
              mc:Ignorable="d"
              x:Class="XamarinDemo.MainPage">
 
-    <!--<Main Screen Layout>-->
     <StackLayout>
-        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="{x:Static Colors:Colors.QTPurple}">
-            <Label Text="QUALITEST" TextColor="White" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
-        </StackLayout>
-        <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="25"/>
-        <StackLayout Orientation="Vertical">
-            <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
-            <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand"/>
-            <Label Text="Password" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
-            <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Button Text="Submit" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" Margin="40"/>
-        </StackLayout>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>
-            <Button Text="Reset" TextColor="White" BackgroundColor="Gray" Grid.Column="0"/>
-            <Button Text="Cancel" TextColor="White" BackgroundColor="Red" Grid.Column="1"/>
-        </Grid>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
     </StackLayout>
 </ContentPage>
