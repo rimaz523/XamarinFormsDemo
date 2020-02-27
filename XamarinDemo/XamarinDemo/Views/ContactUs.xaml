@@ -4,26 +4,45 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
+             xmlns:Trigger="clr-namespace:XamarinDemo.Helpers"
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.ContactUs">
     <ContentPage.Content>
-        <!--Login Screen Layout-->
+        <!--ContactUs Screen Layout-->
         <StackLayout>
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="50">
-                <Label Text="Contact Us" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center"/>
+                <Label Text="Contact Us" FontAttributes="Bold" Style="{StaticResource HeaderLabelStyle}" HorizontalTextAlignment="Center"/>
             </StackLayout>
             <StackLayout Orientation="Vertical">
-                <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand" />
-                <Entry Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email"/>
-                <Label Text="Mobile" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
-                <Entry Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" Keyboard="Telephone"/>
-                <Label Text="Subject" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                <Entry Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
+                    <Entry.Behaviors>
+                        <Trigger:EmailValidationBehaviour/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="Mobile" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                <Entry Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" 
+                       Keyboard="Telephone" MaxLength="10">
+                    <Entry.Triggers>
+                        <EventTrigger Event="TextChanged">
+                            <Trigger:MobileValidationTrigger/>
+                        </EventTrigger>
+                    </Entry.Triggers>
+                </Entry>
+                <Label Text="Landline" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                <Entry Placeholder="Enter landline" HorizontalOptions="FillAndExpand" 
+                       Keyboard="Telephone" MaxLength="10">
+                    <Entry.Behaviors>
+                        <Trigger:MobileValidationBehaviour/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="Subject" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                 <Entry Placeholder="Enter subject" HorizontalOptions="FillAndExpand"/>
-                <Label Text="Message" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Label Text="Message" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                 <Entry Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"/>
             </StackLayout>
             <Grid BackgroundColor="{x:Static Colors:Colors.QTOrange}">
                 <Grid.RowDefinitions>

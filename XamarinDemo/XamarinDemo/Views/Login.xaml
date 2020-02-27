@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
+             xmlns:Trigger="clr-namespace:XamarinDemo.Helpers"
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.Login">
     <ContentPage.Content>
@@ -12,22 +13,26 @@
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="{x:Static Colors:Colors.QTPurple}">
                 <Label Text="QUALITEST" TextColor="{x:Static Colors:Colors.QTWhite}" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
             </StackLayout>
-            <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="25"/>
+            <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
             <StackLayout Orientation="Vertical">
-                <Label Text="Email" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
-                <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand"/>
-                <Label Text="Password" FontAttributes="Bold" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
+                    <Entry.Behaviors>
+                        <Trigger:EmailValidationBehaviour/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                 <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"/>
             </StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Button Text="Reset" TextColor="White" BackgroundColor="{x:Static Colors:Colors.QTGray}" Grid.Column="0"/>
-                <Button Text="Cancel" TextColor="White" BackgroundColor="{x:Static Colors:Colors.QTRed}" Grid.Column="1"/>
+                <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0"/>
+                <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

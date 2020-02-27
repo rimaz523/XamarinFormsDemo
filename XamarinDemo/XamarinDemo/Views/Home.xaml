@@ -7,19 +7,20 @@
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.Home">
     <ContentPage.Content>
+        <!--Home Screen Layout-->
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="300">
                 <Label Text="QUALITEST" TextColor="{x:Static Colors:Colors.QTPurple}" FontAttributes="Bold" FontSize="50"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-                <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success" FontSize="Medium"/>
+                <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Login" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" 
+                <Button Text="Login" Style="{StaticResource DefaultButtonStyle}" 
                         HorizontalOptions="FillAndExpand" Margin="40" Clicked="LoginOnClicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Contact Us" TextColor="{x:Static Colors:Colors.QTWhite}" BackgroundColor="{x:Static Colors:Colors.QTPurple}" 
+                <Button Text="Contact Us" Style="{StaticResource DefaultButtonStyle}" 
                         HorizontalOptions="FillAndExpand" Margin="40" Clicked="ContactUsOnClicked"/>
             </StackLayout>
         </StackLayout>
