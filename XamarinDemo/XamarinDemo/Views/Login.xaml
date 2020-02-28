@@ -25,7 +25,8 @@
                 <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"
+                        Clicked="SubmitOnClicked"/>
             </StackLayout>
             <Grid>
                 <Grid.RowDefinitions>

@@ -16,5 +16,10 @@ namespace XamarinDemo.Views
         {
             InitializeComponent();
         }
+
+        private async void SubmitOnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new QualitestFeedPage());
+        }
     }
 }
