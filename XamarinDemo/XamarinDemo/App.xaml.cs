@@ -11,7 +11,7 @@ namespace XamarinDemo
         {
             InitializeComponent();
 
-            MainPage = new MasterDetailView();
+            MainPage = new NavigationPage(new Home());
         }
 
         protected override void OnStart()
