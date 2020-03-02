@@ -14,17 +14,18 @@ namespace XamarinDemo.Views
     {
         public Home()
         {
+            Title = "Home";
             InitializeComponent();
         }
 
         private async void LoginOnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Login());
+            await Navigation.PushAsync(new Login());
         }
 
         private async void ContactUsOnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ContactUs());
+            await Navigation.PushAsync(new ContactUs());
         }
     }
 }

@@ -33,7 +33,7 @@
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0"/>
-                <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1"/>
+                <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1" Clicked="CancelOnClicked"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

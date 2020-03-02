@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
              x:Class="XamarinDemo.Views.Home">
     <ContentPage.Content>
         <!--Home Screen Layout-->

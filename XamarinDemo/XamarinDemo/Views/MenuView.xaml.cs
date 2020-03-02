@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinDemo.ViewModels;
 
 namespace XamarinDemo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContactUs : ContentPage
+    public partial class MenuView : ContentPage
     {
-        public ContactUs()
+        public ListView MenuList { get { return MenuListView; } }
+
+        public MenuView()
         {
-            Title = "Contact Us";
             InitializeComponent();
+            Title = "Menu";
+            IconImageSource = "hamburger.png";
+            BindingContext = new MenuViewModel();
         }
     }
 }

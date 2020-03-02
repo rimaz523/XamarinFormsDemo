@@ -9,6 +9,7 @@ namespace XamarinDemo.Views
     {
         public QualitestFeedPage()
         {
+            Title = "Feed";
             InitializeComponent();
             BindingContext = new FeedViewModel();
         }

@@ -14,12 +14,19 @@ namespace XamarinDemo.Views
     {
         public Login()
         {
+            Title = "Login";
             InitializeComponent();
         }
 
-        private async void SubmitOnClicked(object sender, EventArgs e)
+        private void SubmitOnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new QualitestFeedPage());
+            //await Navigation.PushAsync(new QualitestFeedPage());
+            App.Current.MainPage = new MasterDetailView();
+        }
+
+        private async void CancelOnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

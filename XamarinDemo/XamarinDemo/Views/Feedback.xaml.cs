@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace XamarinDemo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContactUs : ContentPage
+    public partial class Feedback : ContentPage
     {
-        public ContactUs()
+        public Feedback()
         {
-            Title = "Contact Us";
+            Title = "Feedback";
             InitializeComponent();
         }
     }
