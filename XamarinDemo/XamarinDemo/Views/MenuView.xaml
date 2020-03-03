@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.MenuView">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" BackgroundColor="White">
             <Image Source="Intergen.png" HorizontalOptions="Center" HeightRequest="120"/>
             <Label Text="Rimaz Mohommed" HorizontalOptions="Center"/>
             <BoxView HeightRequest="1" Color="Red"/>

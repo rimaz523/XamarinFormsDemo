@@ -34,5 +34,10 @@
     <string>XamarinDemo</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+  <key>App Transport Security Settings</key>
+  <dict>
+    <key>Allow Arbitrary Loads</key>
+    <string>true</string>
+  </dict>
 </dict>
 </plist>

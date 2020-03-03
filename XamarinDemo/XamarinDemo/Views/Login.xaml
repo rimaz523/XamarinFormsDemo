@@ -16,17 +16,17 @@
             <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
             <StackLayout Orientation="Vertical">
                 <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Email}" Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
                     <Entry.Behaviors>
                         <Trigger:EmailValidationBehaviour/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+                <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"
-                        Clicked="SubmitOnClicked"/>
+                        Command="{Binding LoginCommand}"/>
             </StackLayout>
             <Grid>
                 <Grid.RowDefinitions>

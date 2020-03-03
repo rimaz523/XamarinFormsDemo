@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinDemo.ViewModels;
 
 namespace XamarinDemo.Views
 {
@@ -16,6 +17,7 @@ namespace XamarinDemo.Views
         {
             Title = "Contact Us";
             InitializeComponent();
+            BindingContext = new ContactUsViewModel();
         }
     }
 }

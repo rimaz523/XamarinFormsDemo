@@ -15,13 +15,13 @@
             </StackLayout>
             <StackLayout Orientation="Vertical">
                 <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
+                <Entry Text="{Binding Email}" Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
                     <Entry.Behaviors>
                         <Trigger:EmailValidationBehaviour/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="Mobile" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" 
+                <Entry Text="{Binding Mobile}" Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" 
                        Keyboard="Telephone" MaxLength="10">
                     <Entry.Triggers>
                         <EventTrigger Event="TextChanged">
@@ -30,19 +30,19 @@
                     </Entry.Triggers>
                 </Entry>
                 <Label Text="Landline" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="Enter landline" HorizontalOptions="FillAndExpand" 
+                <Entry Text="{Binding Landline}" Placeholder="Enter landline" HorizontalOptions="FillAndExpand" 
                        Keyboard="Telephone" MaxLength="10">
                     <Entry.Behaviors>
                         <Trigger:MobileValidationBehaviour/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="Subject" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="Enter subject" HorizontalOptions="FillAndExpand"/>
+                <Entry Text="{Binding Subject}" Placeholder="Enter subject" HorizontalOptions="FillAndExpand"/>
                 <Label Text="Message" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
+                <Entry Text="{Binding Message}" Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"/>
+                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40" Command="{Binding SubmitContactCommand}"/>
             </StackLayout>
             <Grid BackgroundColor="{x:Static Colors:Colors.QTOrange}">
                 <Grid.RowDefinitions>
