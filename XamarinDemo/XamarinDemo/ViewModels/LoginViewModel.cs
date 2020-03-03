@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Xamarin.Forms;
 using XamarinDemo.Common;
 using XamarinDemo.Helpers;
-using XamarinDemo.Models;
 
 namespace XamarinDemo.ViewModels
 {
@@ -48,12 +44,7 @@ namespace XamarinDemo.ViewModels
                 await App.Current.MainPage.DisplayAlert(AppConstants.Messages.NetworkErrorTitle, AppConstants.Messages.NetworkError, AppConstants.Messages.OK);
                 return;
             }
-            var credentials = new Credentials 
-            {
-                email = Email,
-                password = Password
-            };
-            var request = await HTTPHelper.SendPostRequest(AppConstants.WebURLs.LoginURL, credentials, false);
+            var request = await HTTPHelper.SendPostRequest(AppConstants.WebURLs.LoginURL, new { email = Email, password = Password }, false);
             await App.Current.MainPage.DisplayAlert(AppConstants.Messages.NetworkErrorTitle, request.ToString(), AppConstants.Messages.OK);
         }
     }
