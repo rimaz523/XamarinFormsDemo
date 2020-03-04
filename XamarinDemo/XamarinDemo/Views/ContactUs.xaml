@@ -15,7 +15,7 @@
             </StackLayout>
             <StackLayout Orientation="Vertical">
                 <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Text="{Binding Email}" Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
+                <Entry Text="{Binding ContactEmail}" Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
                     <Entry.Behaviors>
                         <Trigger:EmailValidationBehaviour/>
                     </Entry.Behaviors>
@@ -42,15 +42,30 @@
                 <Entry Text="{Binding Message}" Placeholder="Enter message" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40" Command="{Binding SubmitContactCommand}"/>
+                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="60,20,60,20" Command="{Binding SubmitContactCommand}"/>
             </StackLayout>
             <Grid BackgroundColor="{x:Static Colors:Colors.QTOrange}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Label Text="+91-92233445566" TextColor="{x:Static Colors:Colors.QTWhite}" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-                <Label Text="contact@qualitest.comaaaa" TextColor="{x:Static Colors:Colors.QTWhite}"  Grid.Column="1"  VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="0094778656574" TextColor="{x:Static Colors:Colors.QTWhite}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CallCommand}" CommandParameter="0094778656574"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="rimazm@intergen.org.nz" TextColor="{x:Static Colors:Colors.QTWhite}" Grid.Row="0"  Grid.Column="1"  VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MailCommand}" CommandParameter="rimazm@intergen.org.nz"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="www.intergen.co.nz" TextColor="{x:Static Colors:Colors.QTWhite}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding UrlCommand}" CommandParameter="https://www.intergen.co.nz"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -20,11 +20,15 @@ namespace XamarinDemo.Common
             public const string OK = "OK";
             public const string NetworkErrorTitle = "No Internet";
             public const string NetworkError = "Please check your internet connection and try again";
+            public const string GenericError = "Error";
         }
 
         public static class Constants
         {
             public const string Token = "jwt";
+            public const string UserId = "userId";
+            public const string RoleId = "roleId";
+            public const string Client = "client";
         }
     }
 }

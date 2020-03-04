@@ -22,7 +22,7 @@
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+                <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="{Binding ShowPassword}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"
@@ -32,8 +32,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0"/>
-                <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1" Clicked="CancelOnClicked"/>
+                <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0" Command="{Binding ResetCommand}"/>
+                <Button Text="Toggle Pwd" Style="{StaticResource RedButtonStyle}" Grid.Column="1" Command="{Binding TogglePasswordCommand}"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
