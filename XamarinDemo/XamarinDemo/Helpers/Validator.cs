@@ -15,5 +15,10 @@ namespace XamarinDemo.Helpers
                 return false;
             return EmailRegex.IsMatch(emailAddress);
         }
+
+        public static bool IsValidPhoneNumber(string phoneNumber)
+        {
+            return phoneNumber.Length >= 10;
+        }
     }
 }
