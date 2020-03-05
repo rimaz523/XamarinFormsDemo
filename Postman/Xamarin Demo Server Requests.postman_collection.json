@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "419f3ef7-a553-4852-8aa0-737202966c1e",
+		"name": "Xamarin Demo Server Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get JWT Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d311282-b394-47b1-839e-e4b8d9a88947",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"accessToken\", jsonData.jwt);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"{{username}}\",\n\t\"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{serverUrl}}/{{api}}/LoginCtrl",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{serverUrl}}"
+					],
+					"path": [
+						"{{api}}",
+						"LoginCtrl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get QT Feed data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{serverUrl}}/{{api}}/QtFeedCtrl",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{serverUrl}}"
+					],
+					"path": [
+						"{{api}}",
+						"QtFeedCtrl"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

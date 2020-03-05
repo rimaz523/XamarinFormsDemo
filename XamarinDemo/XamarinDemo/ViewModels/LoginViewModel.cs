@@ -81,7 +81,9 @@ namespace XamarinDemo.ViewModels
             }
             try
             {
+                IsBusy = true;
                 var response = await HTTPHelper.SendPostRequest(AppConstants.WebURLs.LoginURL, new { email = Email, password = Password }, false);
+                IsBusy = false;
                 var client = JsonConvert.DeserializeObject<Client>(response);
                 Session.Set(AppConstants.Constants.Token, client.Jwt);
                 Session.Set(AppConstants.Constants.UserId, client.User.UserId);
@@ -99,6 +101,10 @@ namespace XamarinDemo.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert(AppConstants.Messages.GenericError, ex.Message, AppConstants.Messages.OK);
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

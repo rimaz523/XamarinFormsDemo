@@ -9,39 +9,50 @@
              x:Class="XamarinDemo.Views.Login">
     <ContentPage.Content>
         <!--Login Screen Layout-->
-        <StackLayout>
-            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="{x:Static Colors:Colors.QTPurple}">
-                <Label Text="QUALITEST" TextColor="{x:Static Colors:Colors.QTWhite}" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
-            </StackLayout>
-            <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
-            <StackLayout Orientation="Vertical">
-                <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Text="{Binding Email}" Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
-                    <Entry.Behaviors>
-                        <Trigger:EmailValidationBehaviour/>
-                    </Entry.Behaviors>
-                </Entry>
-                <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <StackLayout Orientation="Horizontal">
-                    <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="{Binding ShowPassword}"/>
-                    <Image Source="toggle_password.PNG" HeightRequest="20" WidthRequest="30">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TogglePasswordCommand}"/>
-                        </Image.GestureRecognizers>
-                    </Image>
+        <Grid>
+            <StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="{x:Static Colors:Colors.QTPurple}">
+                    <Label Text="QUALITEST" TextColor="{x:Static Colors:Colors.QTWhite}" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
                 </StackLayout>
+                <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                    <Entry Text="{Binding Email}" Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
+                        <Entry.Behaviors>
+                            <Trigger:EmailValidationBehaviour/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="{Binding ShowPassword}"/>
+                        <Image Source="toggle_password.PNG" HeightRequest="20" WidthRequest="30">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TogglePasswordCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"
+                            Command="{Binding LoginCommand}"/>
+                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0" Command="{Binding ResetCommand}"/>
+                    <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1" Command="{Binding CancelCommand}"/>
+                </Grid>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" Style="{StaticResource DefaultButtonStyle}" HorizontalOptions="FillAndExpand" Margin="40"
-                        Command="{Binding LoginCommand}"/>
-            </StackLayout>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-                <Button Text="Reset" Style="{StaticResource GrayButtonStyle}" Grid.Column="0" Command="{Binding ResetCommand}"/>
-                <Button Text="Cancel" Style="{StaticResource RedButtonStyle}" Grid.Column="1" Command="{Binding CancelCommand}"/>
+            <Grid IsVisible="{Binding IsBusy}">
+                <BoxView Color="Black" Opacity="0.5"/>
+                <Frame VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout>
+                        <Label Text="Connecting to server..."/>
+                        <ActivityIndicator IsRunning="True" Color="Purple"/>
+                    </StackLayout>
+                </Frame>
             </Grid>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
