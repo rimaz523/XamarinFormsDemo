@@ -9018,10 +9018,13 @@ namespace XamarinDemo.Droid
 			public const int notify_panel_notification_icon_bg = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int tooltip_frame_dark = 2131165502;
+			public const int toggle_password = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int tooltip_frame_light = 2131165503;
+			public const int tooltip_frame_dark = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int tooltip_frame_light = 2131165504;
 			
 			static Drawable()
 			{

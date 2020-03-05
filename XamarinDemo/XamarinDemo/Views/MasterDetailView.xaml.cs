@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinDemo.Common;
 using XamarinDemo.Models;
 
 namespace XamarinDemo.Views
@@ -30,7 +31,10 @@ namespace XamarinDemo.Views
             if (item.PageType == null)
             {
                 if (await DisplayAlert("Caution", "Are you sure you want to logout", "YES", "Cancel"))
+                {
+                    Preferences.Clear();
                     App.Current.MainPage = new NavigationPage(new Home());
+                }
                 return;
             }
             var page = (Page)Activator.CreateInstance(item.PageType);
