@@ -17,7 +17,7 @@
                 <Label Text="Welcome to Qualitest Partner, the next step in working with our clients and ensuring success"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Login Here" Style="{StaticResource DefaultButtonStyle}" 
+                <Button Text="Login" Style="{StaticResource DefaultButtonStyle}" 
                         HorizontalOptions="FillAndExpand" Margin="40" Clicked="LoginOnClicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">

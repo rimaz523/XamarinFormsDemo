@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout Padding="10" BackgroundColor="White">
             <Image Source="Intergen.png" HorizontalOptions="Center" HeightRequest="120"/>
-            <Label Text="Rimaz Mohommed" HorizontalOptions="Center"/>
+            <Label Text="{Binding UserFullName}" HorizontalOptions="Center"/>
             <BoxView HeightRequest="1" Color="Red"/>
             <ListView x:Name="MenuListView" ItemsSource="{Binding Pages}">
                 <ListView.ItemTemplate>

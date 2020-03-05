@@ -61,7 +61,6 @@ namespace XamarinDemo.ViewModels
 
         public ContactUsViewModel()
         {
-            //SubmitContactCommand = new Command(SubmitContactAsync);
             SubmitContactCommand = new Command(
                 execute: () => { SubmitContactAsync(null); }
                 ,
@@ -98,10 +97,20 @@ namespace XamarinDemo.ViewModels
             if (apiResponse.Message == AppConstants.Messages.Success)
             {
                 await App.Current.MainPage.DisplayAlert(AppConstants.Messages.GenericInfo, AppConstants.Messages.ResponseSent, AppConstants.Messages.OK);
+                ResetForm();
                 return;
             }
             await App.Current.MainPage.DisplayAlert(AppConstants.Messages.GenericError, AppConstants.Messages.ResponseFailed, AppConstants.Messages.OK);
 
+        }
+
+        private void ResetForm()
+        {
+            ContactEmail = "";
+            Mobile = "";
+            Landline = "";
+            Subject = "";
+            Message = "";
         }
 
         public async void OpenDialler(object sender)
