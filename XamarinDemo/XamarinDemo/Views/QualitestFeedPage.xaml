@@ -14,10 +14,10 @@
                             <Frame Margin="0,5" BorderColor="Black" CornerRadius="10">
                                 <StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Heading}" Style="{StaticResource CaptionLabelStyle}"/>
+                                        <Label Text="{Binding Title}" Style="{StaticResource CaptionLabelStyle}"/>
                                     </StackLayout>
                                     <BoxView HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" />
-                                    <Image Source="{Binding ImageUrl}"/>
+                                    <Image Source="{Binding Image, Converter={StaticResource imageURLConverter}}"/>
                                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
                                         <Label Text="{Binding Description}"/>
                                         <Image Source="arrow_right.png" HeightRequest="25" WidthRequest="25"/>

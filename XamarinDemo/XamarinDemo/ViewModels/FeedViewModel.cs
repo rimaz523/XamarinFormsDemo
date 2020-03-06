@@ -1,32 +1,37 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using XamarinDemo.Common;
+using XamarinDemo.Helpers;
 using XamarinDemo.Models;
 
 namespace XamarinDemo.ViewModels
 {
-    public class FeedViewModel
+    public class FeedViewModel: BaseViewModel
     {
-        public List<Feed> Feeds { get; set; }
+        ObservableCollection<Feed> feeds;
+        public ObservableCollection<Feed> Feeds
+        {
+            get { return feeds; }
+            set
+            {
+                SetProperty(ref feeds, value);
+            }
+        }
 
         public FeedViewModel()
         {
-            Feeds = new List<Feed>()
-            {
-                new Feed()
-                {
-                    Heading = "New Testing Show Podcast - Identifying Testing Talent and Being the Testing Talent",
-                    Description = "Is you organization truly Agile, or is it stuck in the state of Scrummerfall-- going through bla bla bla",
-                    ImageUrl = "image_1.jpg"
-                },
-                new Feed()
-                {
-                    Heading = "Converting to SAP S/4HANA? Dont Neglect These 8 Crucial Questions",
-                    Description = "When facing what must be one of the biggest transformational endeavors your organization will bla bla bla",
-                    ImageUrl = "image_2.jpg"
-                }
-            };
+            Feeds = new ObservableCollection<Feed>();
+            UpdateFeed();
 
+        }
+
+        private async void UpdateFeed()
+        {
+            var response = await HTTPHelper.SendGetRequest(AppConstants.WebURLs.QTFeedURL, null);
+            Feeds = JsonConvert.DeserializeObject<ObservableCollection<Feed>>(response);
         }
     }
 }

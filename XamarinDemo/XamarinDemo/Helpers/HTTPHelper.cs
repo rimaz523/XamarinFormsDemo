@@ -96,7 +96,7 @@ namespace XamarinDemo.Helpers
 
         public static string GetBaseAddress()
         {
-            return AppConstants.WebURLs.BaseURL;
+            return AppConstants.WebURLs.BaseURL + "/";
         }
 
         public static string GetAuthenticationHeader()

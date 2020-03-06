@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
+             xmlns:local="clr-namespace:XamarinDemo.ValueConverters"
              mc:Ignorable="d"
              x:Class="XamarinDemo.App">
     <Application.Resources>
@@ -43,6 +44,7 @@
             <Style x:Key="CaptionLabelStyle" TargetType="Label" BasedOn="{x:StaticResource HeaderLabelStyle}">
                 <Setter Property="FontSize" Value="16"/>
             </Style>
+            <local:PrependBaseURLToImageConverter x:Key="imageURLConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

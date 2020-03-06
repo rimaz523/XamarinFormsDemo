@@ -9,7 +9,7 @@ namespace XamarinDemo.Common
         public static class WebURLs
         {
             public static readonly string ServerURL = "http://49.204.78.4";
-            public static readonly string BaseURL = "http://49.204.78.4/qt/index.php/";
+            public static readonly string BaseURL = "http://49.204.78.4/qt/index.php";
             public static readonly string LoginURL = "LoginCtrl";
             public static readonly string ContactURL = "ContactCtrl";
             public static readonly string QTFeedURL = "QtFeedCtrl";
