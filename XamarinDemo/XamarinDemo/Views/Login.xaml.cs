@@ -18,6 +18,8 @@ namespace XamarinDemo.Views
             Title = "Login";
             InitializeComponent();
             BindingContext = new LoginViewModel();
+            Button b = new Button();
+            b.BackgroundColor = Color.Red;
         }
 
         //private void SubmitOnClicked(object sender, EventArgs e)

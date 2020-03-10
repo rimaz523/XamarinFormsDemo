@@ -5,6 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
              xmlns:Trigger="clr-namespace:XamarinDemo.Helpers"
+             xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local ="clr-namespace:XamarinDemo.Effects"
              mc:Ignorable="d"
              x:Class="XamarinDemo.Views.Login">
     <ContentPage.Content>
@@ -15,21 +17,28 @@
                     <Label Text="QUALITEST" TextColor="{x:Static Colors:Colors.QTWhite}" FontAttributes="Bold" FontSize="50" HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <Label Text="Welcome back!" FontAttributes="Bold" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+                <Frame Padding="0" WidthRequest="120" HeightRequest="120" BackgroundColor="Aqua" HorizontalOptions="Center"
+                       CornerRadius="60" BorderColor="Black" IsClippedToBounds="True">
+                    <Image Source="instagram.jpg"/>
+                </Frame>
                 <StackLayout Orientation="Vertical">
                     <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                     <Entry Text="{Binding Email}" Placeholder="enter_email@example.com" HorizontalOptions="FillAndExpand">
                         <Entry.Behaviors>
                             <Trigger:EmailValidationBehaviour/>
                         </Entry.Behaviors>
+                        <Entry.Effects>
+                            <local:FocusEffect/>
+                        </Entry.Effects>
                     </Entry>
                     <Label Text="Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                     <StackLayout Orientation="Horizontal">
                         <Entry Text="{Binding Password}" Placeholder="*********" HorizontalOptions="FillAndExpand" IsPassword="{Binding ShowPassword}"/>
-                        <Image Source="toggle_password.PNG" HeightRequest="20" WidthRequest="30">
-                            <Image.GestureRecognizers>
+                        <ffImage:CachedImage Source="toggle_password.PNG" HeightRequest="20" WidthRequest="30">
+                            <ffImage:CachedImage.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding TogglePasswordCommand}"/>
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </ffImage:CachedImage.GestureRecognizers>
+                        </ffImage:CachedImage>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">

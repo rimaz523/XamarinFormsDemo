@@ -6,6 +6,7 @@
              xmlns:Colors="clr-namespace:XamarinDemo.Common"
              xmlns:Trigger="clr-namespace:XamarinDemo.Helpers"
              mc:Ignorable="d"
+             xmlns:Controls="clr-namespace:XamarinDemo.Controls"
              x:Class="XamarinDemo.Views.ContactUs">
     <ContentPage.Content>
         <!--ContactUs Screen Layout-->
@@ -15,11 +16,11 @@
             </StackLayout>
             <StackLayout Orientation="Vertical">
                 <Label Text="Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
-                <Entry Text="{Binding ContactEmail}" Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
-                    <Entry.Behaviors>
+                <Controls:BorderLessEntry Text="{Binding ContactEmail}" Placeholder="Enter_email@example.com" HorizontalOptions="FillAndExpand" Keyboard="Email">
+                    <Controls:BorderLessEntry.Behaviors>
                         <Trigger:EmailValidationBehaviour/>
-                    </Entry.Behaviors>
-                </Entry>
+                    </Controls:BorderLessEntry.Behaviors>
+                </Controls:BorderLessEntry>
                 <Label Text="Mobile" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Style="{StaticResource CaptionLabelStyle}"/>
                 <Entry Text="{Binding Mobile}" Placeholder="Enter mobile number" HorizontalOptions="FillAndExpand" 
                        Keyboard="Telephone" MaxLength="10">

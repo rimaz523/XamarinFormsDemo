@@ -10,13 +10,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Trigger in Style-->
-            <Style TargetType="Entry">
+            <!--<Style TargetType="Entry">
                 <Style.Triggers>
                     <Trigger TargetType="Entry" Property="IsFocused" Value="True">
                         <Setter Property="BackgroundColor" Value="Aqua"/>
                     </Trigger>
                 </Style.Triggers>
-            </Style>
+            </Style>-->
             <!--Explicit Style-->
             <Style x:Key="DefaultButtonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{x:Static Colors:Colors.QTPurple}"/>
