@@ -64,9 +64,23 @@
     <Compile Include="FocusEffect.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\NZLabelRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\Lobster-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

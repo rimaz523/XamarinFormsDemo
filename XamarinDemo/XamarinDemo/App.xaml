@@ -20,18 +20,18 @@
             <!--Explicit Style-->
             <Style x:Key="DefaultButtonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{x:Static Colors:Colors.QTPurple}"/>
-                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontFamily" Value="Black"/>
                 <Setter Property="Font" Value="20"/>
                 <Setter Property="TextColor" Value="{x:Static Colors:Colors.QTWhite}"/>
             </Style>
             <Style x:Key="HeaderLabelStyle" TargetType="Label">
-                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontFamily" Value="Black"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
             <!--Implicit Style-->
             <Style TargetType="Label">
-                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontFamily" Value="Black"/>
                 <Setter Property="FontSize" Value="16"/>
             </Style>
             <!--Inherited Style-->
